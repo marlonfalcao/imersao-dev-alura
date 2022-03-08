@@ -1,36 +1,92 @@
 body {
     font-family: 'Roboto Mono',monospace;
-    min-height: 400px;
-    background-image: url('https://image.flaticon.com/icons/png/512/201/201635.png'); /*Falta arrumar o endereço dessa imagem*/
-    background-color: #000000;
-    background-size: 80vh;
+    min-height: 900px;
+    background-image: url('https://images.pexels.com/photos/1910225/pexels-photo-1910225.jpeg?cs=srgb&dl=pexels-bruno-thethe-1910225.jpg&fm=jpg'); /*Alterado a imagem de fundo*/
+    background-color: #696969;/*alterado o background*/
+    background-size: auto;
     background-position: center bottom;
     background-repeat: no-repeat;
   }
+
+header {
+    text-align: center;
+    margin-top: 5px;
+    padding: 15px 2px;
+  }
   
-  .container {
+.calculadora-de-media {
     text-align: center;
     padding: 20px;
-    height: 100vh;
+    height: auto;
   }
   
-  .page-title {
+.page-title {
     color:#ffffff;
     margin: 0 0 5px;
+    font-weight: bold;
+    text-decoration-color: #696969;
   }
   
-  .page-subtitle {
+.page-subtitle {
     color:#ffffff;
     margin-top: 5px;
+    font-weight: bold;
   }
   
-  .page-logo {
+.page-logo {
     width: 200px;
   }
   
-  .alura-logo {
+.alura-logo {
     width: 40px;
     position: absolute;
     top: 10px;
     right: 10px;
+  }
+form label, form legend {
+    display: block;
+    margin: 0 0 10px;
+  }
+
+.formulario_notas {
+  color:#ffffff;
+  margin: 0 0 5px;
+  font-weight: bold;
+  text-decoration-color: #696969;
+}
+
+.input-padrao {
+	margin: 0 0 20px;
+	padding: 2px 3px;
+	width: 58%;
+}
+
+.botão_calcular{
+  margin: 0 0 20px;
+	padding: 2px 3px;
+	width: 58%;
+}
+
+#resultado {
+  margin-top: 5px;
+  font-size: 2rem;
+  font-weight: bold;
+	padding: 2px 3px;
+	width: 100%;
+  color:#ffffff;
+}
+
+#mensagem {
+  margin-top: 5px;
+  font-size: 2rem;
+  font-weight: bold;
+	padding: 2px 3px;
+	width: 100%;
+  color:#ffffff;
+}
+
+.conversor {
+    text-align: center;
+    padding: 20px;
+    height: auto;
   }

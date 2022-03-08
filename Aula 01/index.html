@@ -1,24 +1,60 @@
-<html>
-  <head>
-    <title> Imersão Dev Alura - Aula 01</title>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="main.js">
+  <title> Imersão Dev Alura - Aula 01</title>
+  <link rel="stylesheet" href="css/style.css">
 
-  </head>
+</head>
   <body>
-    <div class="container">
-      <h1 class="page-title">
-      Calculadora de média</h1>
-      <p class="page-subtitle">
-      Descubra qual a sua média de nota de todas as provas!
-      </p>
+    <header class="header">
+      <a href="https://alura.com.br/" target="_blank">
+      <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo"> 
+      </a>
       <img src="images/logo-imersao.svg" class="page-logo" alt="">
-    </div>
-    <a href="https://alura.com.br/" target="_blank">
-    <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo"> 
-    </a>
+    </header>
+    <main class="conteudo">
+      <section class="calculadora-de-media">
+          <h1 class="page-title">
+          Calculadora de média</h1>
+          <p class="page-subtitle">
+          Descubra qual a sua média de nota de todas as provas!
+          </p>
+          <br>
+          <form class="formulario_notas" id="form">
+
+            <label for="primeiroSemestre">Digite a nova do primeiro semestre</label>
+            <input type="number" min="0" max="10" id="primeiroSemestre" class="input-padrao" required placeholder="Digique aqui sua nota, em caso de casas decimais utilize um ponto.">
+
+            <label for="segundoSemestre">Digite a nova do segundo semestre</label>
+            <input type="number" min="0" max="10" id="segundoSemestre" class="input-padrao" required placeholder="Digique aqui sua nota, em caso de casas decimais utilize um ponto.">
+
+            <label for="terceiroSemestre">Digite a nova do terceiro semestre</label>
+            <input type="number" min="0" max="10" id="terceiroSemestre" class="input-padrao" required placeholder="Digique aqui sua nota, em caso de casas decimais utilize um ponto.">
+
+            <label for="quartoSemestre">Digite a nova do quarto semestre</label>
+            <input type="number" min="0" max="10" id="quartoSemestre" class="input-padrao" required placeholder="Digique aqui sua nota, em caso de casas decimais utilize um ponto.">
+
+            <button type="submit" id="botão_calcular">Calcular</button>
+          </form>
+          <p class="page-subtitle">
+            A sua média é:
+            </p>
+          <div id="resultado"></div>
+          <div id="mensagem"></div>
+      </section>
+      <!-- <section class="conversor">
+        <h1 class="page-title">
+          Conversor de temperatura</h1>
+          <p class="page-subtitle">
+          Insira um valor em graus celcius e descubra o valor em farenheit!
+          </p>
+      </section>-->
+    </main>
+
+    <script src="main.js"></script>
   </body>
 </html>
-
-<!--Parei no minuto 38:10-->
