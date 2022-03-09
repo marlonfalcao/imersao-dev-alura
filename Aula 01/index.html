@@ -21,30 +21,33 @@
           <h1 class="page-title">
           Calculadora de média</h1>
           <p class="page-subtitle">
-          Descubra qual a sua média de nota de todas as provas!
+          Descubra qual a sua média e se você foi aprovado(a)!
           </p>
           <br>
-          <form class="formulario_notas" id="form">
+          <div class="formulario_notas" id="form">
 
             <label for="primeiroSemestre">Digite a nova do primeiro semestre</label>
-            <input type="number" min="0" max="10" id="primeiroSemestre" class="input-padrao" required placeholder="Digique aqui sua nota, em caso de casas decimais utilize um ponto.">
+            <h2>(Em caso de casas decimais, utilize o ponto ao invés de virgula.)</h2>
+            <input type="number" step="0.1" min="0" max="10" id="primeiroSemestre" class="input-padrao"> <!--placeholder="Digique aqui sua nota, em caso de casas decimais utilize um ponto."-->
 
             <label for="segundoSemestre">Digite a nova do segundo semestre</label>
-            <input type="number" min="0" max="10" id="segundoSemestre" class="input-padrao" required placeholder="Digique aqui sua nota, em caso de casas decimais utilize um ponto.">
+            <h2>(Em caso de casas decimais, utilize o ponto ao invés de virgula.)</h2>
+            <input type="number" step="0.1" min="0" max="10" id="segundoSemestre" class="input-padrao" required> <!--placeholder="Digique aqui sua nota, em caso de casas decimais utilize um ponto."-->
 
             <label for="terceiroSemestre">Digite a nova do terceiro semestre</label>
-            <input type="number" min="0" max="10" id="terceiroSemestre" class="input-padrao" required placeholder="Digique aqui sua nota, em caso de casas decimais utilize um ponto.">
+            <h2>(Em caso de casas decimais, utilize o ponto ao invés de virgula.)</h2>
+            <input type="number" step="0.1" min="0" max="10" id="terceiroSemestre" class="input-padrao" required> <!--placeholder="Digique aqui sua nota, em caso de casas decimais utilize um ponto."-->
 
             <label for="quartoSemestre">Digite a nova do quarto semestre</label>
-            <input type="number" min="0" max="10" id="quartoSemestre" class="input-padrao" required placeholder="Digique aqui sua nota, em caso de casas decimais utilize um ponto.">
-
-            <button type="submit" id="botão_calcular">Calcular</button>
-          </form>
-          <p class="page-subtitle">
-            A sua média é:
-            </p>
-          <div id="resultado"></div>
-          <div id="mensagem"></div>
+            <h2>(Em caso de casas decimais, utilize o ponto ao invés de virgula.)</h2>
+            <input type="number" step="0.1" min="0" max="10" id="quartoSemestre" class="input-padrao" required><br> <!--placeholder="Digique aqui sua nota, em caso de casas decimais utilize um ponto."-->
+            <br>
+            <button type="click" onclick="CalcularMedia()" id="botão">Calcular</button>
+            <button type="click" onclick="reload()" class="reload" id="botão">Fazer Novamente</button>
+          </div>
+          <div class="resultado" id="resultado"></div>
+          <div class="mensagem-aprovado" id="mensagem-aprovado"></div>
+          <div class="mensagem-reprovado" id="mensagem-reprovado"></div>
       </section>
       <!-- <section class="conversor">
         <h1 class="page-title">

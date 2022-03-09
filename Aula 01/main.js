@@ -8,52 +8,44 @@
 // Imprimir na própria página o resultado, ao invés do console
 // Criar um conversor de temperaturas entre farenheit e celcius
 // Colocar a conta inteira da média em apenas uma linha
+function reload() {
+    document.location.reload(true);
+}
 
-const form = document.querySelector("#form")
-// variavel que busca os dados do id form, formulario
-//console.log(form)
-
-const inputs = form.querySelectorAll("input"); // armazena todos os inputs que estão dentro do form
-//console.log(inputs)
-
-const resultadoTexto = document.querySelector("#resultado")
-const resultadoMensagem = document.querySelector("#mensagem")
-
-//a funcao addEventListener adiciona um evento de escuta para captar os dados de inputs quando houver o submit (clique)
-form.addEventListener("submit", event => {
-    event.preventDefault()
-    const inputValue = event.target.value
+function CalcularMedia() {
     
-    let notas = []
+    const element1 = document.getElementById("primeiroSemestre");
+    const element2 = document.getElementById("segundoSemestre");
+    const element3 = document.getElementById("terceiroSemestre");
+    const element4 = document.getElementById("quartoSemestre");
+
+    const valor1 = element1.value;
+    const valor2 = element2.value;
+    const valor3 = element3.value;
+    const valor4 = element4.value;
+
+    const nota1 = parseFloat(valor1);
+    const nota2 = parseFloat(valor2);
+    const nota3 = parseFloat(valor3);
+    const nota4 = parseFloat(valor4);
+
+    const media = ((Number(nota1 + nota2 + nota3 + nota4) / 4).toFixed(1));
     
-    inputs.forEach((input) => {
-        notas.push(Number(input.value)) // Pega todos os inputs e pra cada input ele adiciona o valor no array notas (declarado vazio)
-        input.value = "" // limpa o input após adicionar os valores de cada input no array
-    })
+    const elementoResultado = document.getElementById("resultado");
+    const resultado = `Sua média é ${media}.`;
+    elementoResultado.innerHTML = resultado;
+    
+    let mensagemResultado = ""
 
-    const somaNotas = notas.reduce((acc, nota) => acc + nota, 0) // usado pra converter um tipo de dado em outro tipo de dado (acc = acumulator/pode ser qualquer letra ou expressao) - passa pelos valores do array somando e acumulando!
+    const elementoMensagemAprovado = document.getElementById("mensagem-aprovado");
+    const elementoMensagemReprovado = document.getElementById("mensagem-reprovado");
 
-    const media = somaNotas / notas.length
-
-    const resultadoFinal = Number(media).toFixed(1) //transforma em flutuante com somente uma casa decimal
-
-    //console.log(resultadoFinal)
-
-    resultadoTexto.textContent = resultadoFinal
-
-    if (resultadoFinal < 7) {
-        resultadoTexto.style.color = "red"
-        resultadoMensagem.textContent = "Você foi reprovado!"
-        resultadoMensagem.style.color = "red"
-        return
+    if (media > 7){
+        mensagemResultado = `Devido sua média ser ${media} e ficar acima de 7.0, você foi aprovado!`
+        elementoMensagemAprovado.innerHTML = mensagemResultado
+    } else {
+        mensagemResultado = `Devido sua média ser ${media} e ficar abaixo de 7.0, você foi REPROVADO!`
+        elementoMensagemReprovado.innerHTML = mensagemResultado
     }
-
-    resultadoTexto.style.color = "green"
-    resultadoMensagem.style.color = "green"
-    resultadoMensagem.textContent = "Parabéns, você foi aprovado!"
-})
-
-
-
-
+}
 
