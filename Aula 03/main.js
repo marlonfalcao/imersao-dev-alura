@@ -7,7 +7,7 @@ function reload() {
     document.location.reload(true);
 }
 
-let numeroDesconhecido = 0
+//let numeroDesconhecido = 0
 
 function numeroAleatório(min, max) {
     min = Math.ceil(min);

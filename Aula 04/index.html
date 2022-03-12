@@ -1,0 +1,52 @@
+<!--
+  Desafios desta aula!
+  
+  - Escolher o seu tema preferido para adaptar ao nosso código, ou seja, ao invés de filmes pode ser uma lista de animes, HQ's, cursos, capas de jogos...
+  - Tentar implementar outras versões da estrutura de repetição que fizemos com for, como por exemplo com foreach ou while
+  - Criar uma condição para não adicionar filmes repetidos, caso eles já tenham sido adicionados anteriormente
+  - Criar um campo e botão para adicionar a imagem pela tela, e não direto no código
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluraflix</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header>
+    <h1 class="page-title">
+      Aluraflix
+    </h1>
+    <a href="https://alura.com.br/" target="_blank">
+      <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+    </a>
+  </header>
+  <main class="container">
+    <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
+    <div>
+      <h2 id="subtitulo">Adicione um novo filme</h2>
+      
+      <form id="#addFilme">
+        <label for="text">Insira aqui o endereço da imagem do filme</label><br>
+        <input type="text" id="filmeAdicionado" required>
+        <button type="submit" id="add" class="botao">adicionar</button>
+      </form>
+    </div>
+    <div> <!--Div da parte que apresenta os filmes adicionados-->
+      <h2 id="subtitulo">Filmes Adicionados</h2>
+    </div>
+    <div id="listaImagens">
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
+
+
